@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t aleechan/react-test -f ./client/Dockerfile.dev
+  - docker build -t aleechan/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run aleechan/react-test npm test -- --coverage
